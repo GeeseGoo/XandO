@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>X's and O's</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="main.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<div class="theme-button"></div>
+		</header>
+		<div class="content">
+			<div class="start-page">
+				<div class="top-container"><h1 class="title">X's and O's</h1></div>
+				<div class="start-content">
+					<div class="faceoff-panel">
+						<div class="big-panel panel-left">
+							<div class="inner-panel-top">X</div>
+							<div class="inner-panel-middle neomorph">
+								<div style="width: 100%; height: 0; padding-bottom: 100%; position: relative">
+									<iframe
+										src="https://giphy.com/embed/3o6UB117P7KdPnnpNC"
+										width="100%"
+										height="100%"
+										style="position: absolute"
+										frameborder="0"
+										class="giphy-embed"
+										allowfullscreen></iframe>
+								</div>
+							</div>
+							<div class="inner-panel-bottom"><button class="switch-avatar">Swap Avatar</button></div>
+						</div>
+						<div class="panel-middle">
+							<h2>VS</h2>
+							<button class="start-button">Click To Start</button>
+						</div>
+						<div class="big-panel panel-right">
+							<div class="inner-panel-top">O</div>
+							<div class="inner-panel-middle neomorph">
+								<div style="width: 100%; height: 0; padding-bottom: 100%; position: relative">
+									<iframe
+										src="https://giphy.com/embed/xT77XUw1XMVGIxgove"
+										width="100%"
+										height="100%"
+										style="position: absolute"
+										frameborder="0"
+										class="giphy-embed"
+										allowfullscreen></iframe>
+								</div>
+							</div>
+							<div class="inner-panel-bottom"><button class="switch-avatar">Swap Avatar</button></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="game-page invis hidden">
+				<header><button class="return">return</button></header>
+				<div class="player-indicator-container">
+					<div class="player-indicator-bar">
+						<div class="slider"><span class="slider-text"></span></div>
+					</div>
+				</div>
+				<div class="board-panel">
+					<div class="game">
+						<div class="game-position"></div>
+						<div class="game-position"></div>
+						<div class="game-position"></div>
+						<div class="game-position"></div>
+						<div class="game-position"></div>
+						<div class="game-position"></div>
+						<div class="game-position"></div>
+						<div class="game-position"></div>
+						<div class="game-position"></div>
+					</div>
+				</div>
+				<div class="score-bar">
+					<div class="score-x">
+						<p>Score X</p>
+						<h3 class="X">0</h3>
+					</div>
+					<div class="score-tie">
+						<p>Ties</p>
+						<h3 class="Tie">0</h3>
+					</div>
+					<div class="score-o">
+						<p>Score O</p>
+						<h3 class="O">0</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer></footer>
+	</body>
+</html>

@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+
+.game-page {
+	display: grid;
+	flex: auto;
+	transition: 0.8s linear;
+}
+
+body {
+	background: #e0e0e0;
+	font-family: "Concert One";
+	color: black;
+}
+
+.top-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	h1 {
+		font-size: 80px;
+	}
+}
+
+.invis {
+	opacity: 0;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.start-page {
+	display: grid;
+	transition: 0.8s linear;
+	grid-template-rows: 2fr 6fr 1fr;
+}
+.start-content {
+	justify-self: center;
+}
+.faceoff-panel {
+	display: flex;
+	width: min(90vw, 1200px);
+}
+
+.inner-panel-top {
+	text-align: center;
+	font-size: 50px;
+}
+
+.board-panel {
+	transition: 0.8s ease;
+	justify-self: center;
+	display: flex;
+	flex-direction: column;
+	gap: 100px;
+	justify-content: center;
+	align-items: center;
+}
+
+.score-bar {
+	justify-self: center;
+	display: flex;
+	gap: 100px;
+}
+
+.score-bar > * {
+	text-align: center;
+}
+
+.player-indicator-container {
+	display: flex;
+	justify-content: center;
+	align-items: end;
+}
+.player-indicator-bar {
+}
+
+.game {
+	display: grid;
+	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+	gap: 23px;
+}
+
+.game-position {
+	width: 100px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 14px;
+	font-size: 30px;
+
+	p {
+		opacity: 0;
+		transition: 0.3s ease;
+	}
+
+	p.visible {
+		opacity: 1;
+	}
+}
+
+.game-position:nth-child(1) {
+	box-shadow: 6px 6px 12px #aaaaaa, -6px -6px 12px #ffffff;
+	background: linear-gradient(145deg, #cacaca, #f0f0f0);
+}
+
+.game-position:nth-child(2) {
+	box-shadow: 0px 6px 12px #aaaaaa, 0px -6px 12px #ffffff;
+	background: linear-gradient(162deg, #cacaca, #f0f0f0);
+}
+
+.game-position:nth-child(3) {
+	box-shadow: -6px 6px 12px #aaaaaa, 6px -6px 12px #ffffff;
+	background: linear-gradient(225deg, #cacaca, #f0f0f0);
+}
+
+.game-position:nth-child(4) {
+	box-shadow: 6px 0px 12px #aaaaaa, -6px 0px 12px #ffffff;
+	background: linear-gradient(108deg, #cacaca, #f0f0f0);
+}
+
+.game-position:nth-child(5) {
+	box-shadow: 0px 0px 12px #aaaaaa, 0px 0px 12px #ffffff;
+	background: linear-gradient(135deg, #cacaca, #f0f0f0);
+}
+
+.game-position:nth-child(6) {
+	box-shadow: -6px 0px 12px #aaaaaa, 6px 0px 12px #ffffff;
+	background: linear-gradient(198deg, #cacaca, #f0f0f0);
+}
+
+.game-position:nth-child(7) {
+	box-shadow: 6px -6px 12px #aaaaaa, -6px 6px 12px #ffffff;
+	background: linear-gradient(72deg, #cacaca, #f0f0f0);
+}
+
+.game-position:nth-child(8) {
+	box-shadow: 0px -6px 12px #aaaaaa, 0px 6px 12px #ffffff;
+	background: linear-gradient(18deg, #cacaca, #f0f0f0);
+}
+
+.game-position:nth-child(9) {
+	box-shadow: -6px -6px 12px #aaaaaa, 6px 6px 12px #ffffff;
+	background: linear-gradient(315deg, #cacaca, #f0f0f0);
+}
+
+.faceoff-panel > * {
+	flex: auto;
+}
+
+.panel-left {
+	border-radius: 50px;
+	background: #e0e0e0;
+	box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+	padding: 0px 30px 30px;
+}
+
+.panel-right {
+	border-radius: 50px;
+	background: #e0e0e0;
+	box-shadow: -20px 20px 60px #bebebe, 20px -20px 60px #ffffff;
+	padding: 0px 30px 30px;
+}
+iframe {
+	border-radius: 50px;
+}
+
+.panel-middle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	h2 {
+		font-size: 8vw;
+	}
+}
+.inner-panel-bottom {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+button {
+	border-radius: 17px;
+	background: #e0e0e0;
+	box-shadow: inset 10px 10px 21px #bebebe, inset -10px -10px 21px #ffffff;
+	border: none;
+	padding: 15px 20px;
+	transition: 0.3s ease;
+}
+button:active {
+	border-radius: 17px;
+	background: linear-gradient(145deg, #f0f0f0, #cacaca);
+	box-shadow: 10px 10px 21px #bebebe, -10px -10px 21px #ffffff;
+}
+button:hover {
+	scale: 1.04;
+	cursor: pointer;
+}
+.title {
+	text-align: center;
+	font-size: 40px;
+}
+
+.neomorph {
+	border-radius: 50px;
+	background: #e0e0e0;
+	box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	flex: auto;
+}
+
+.start-page {
+	flex: auto;
+}
+
+header {
+	padding: 5px 15px;
+	position: absolute;
+}
+
+.player-indicator-bar {
+	height: 80px;
+	width: 200px;
+	border-radius: 50px;
+	background: #e0e0e0;
+	box-shadow: inset 22px 22px 44px #bebebe, inset -22px -22px 44px #ffffff;
+	display: flex;
+	align-items: center;
+}
+
+.slider {
+	border-radius: 124px;
+	background: #e0e0e0;
+	box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+	height: 75px;
+	width: 75px;
+	transition: all 0.8s ease;
+	position: relative;
+
+	.slider-text::before {
+		content: "X";
+	}
+}
+
+.slider-text {
+	font-size: 40px;
+	transition: all 0.8s ease;
+	display: grid;
+	place-content: center;
+	width: 100%;
+	height: 100%;
+	border-radius: 100px;
+}
+.slide {
+	translate: 120px;
+	border-radius: 124px;
+	background: #e0e0e0;
+	box-shadow: -8px 8px 16px #bebebe, 8px -8px 16px #ffffff;
+	rotate: 360deg;
+
+	.slider-text::before {
+		content: "O";
+	}
+}
+
+@keyframes blink-green {
+	0%,
+	100% {
+		background-color: transparent;
+		color: black;
+	}
+	50% {
+		background-color: rgba(54, 186, 54, 0.434);
+		color: white;
+	}
+}
+
+@keyframes blink-red {
+	0%,
+	100% {
+		background-color: transparent;
+		color: black;
+	}
+	50% {
+		background-color: rgba(220, 56, 56, 0.534);
+		color: white;
+	}
+}
+.disabled {
+	pointer-events: none; /* Optional: to visually indicate that the elements are disabled */
+}
+
+.green {
+	animation: blink-green 1s 3 ease-in-out;
+}
+.red {
+	animation: blink-red 1s 3 ease-in-out;
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+	margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+	isolation: isolate;
+}
