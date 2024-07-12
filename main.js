@@ -16,19 +16,28 @@ avatars = (function avatars() {
 	};
 
 	function handleSwapAvatar() {
-		const giphyFrame = this.closest(".big-panel").querySelector("iframe");
-		while (true) {
-			const avatar = randomAvatar();
-			if (giphyFrame.getAttribute("src") !== avatar) {
-				giphyFrame.setAttribute("src", avatar);
-				break;
-			}
-		}
+		this.closest(".big-panel").querySelector("iframe").classList.add("invis");
 	}
 	const initButtons = () => {
 		document
 			.querySelectorAll(".switch-avatar")
 			.forEach((button) => button.addEventListener("click", handleSwapAvatar));
+		document.querySelectorAll("iframe").forEach((x) => {
+			x.addEventListener("transitionend", () => {
+				if (x.classList.contains("invis")) {
+					while (true) {
+						const avatar = randomAvatar();
+						if (x.getAttribute("src") !== avatar) {
+							x.setAttribute("src", avatar);
+							break;
+						}
+					}
+				}
+			});
+			x.addEventListener("load", () => {
+				x.classList.remove("invis");
+			});
+		});
 	};
 	return { initButtons };
 })();
